@@ -138,7 +138,10 @@ class _AnimationControllerHookState
 
   @override
   void dispose() {
-    _animationController.dispose();
+    if (_animationController != null) {
+    _animationController
+    ..stop()  
+    ..dispose();
   }
 
   @override
